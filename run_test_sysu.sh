@@ -1,1 +1,0 @@
-CUDA_VISIBLE_DEVICES=0 python test_sysu.py -b 256 --workers 8

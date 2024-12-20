@@ -3,9 +3,9 @@ This is the pytorch implementation of "Dual-Modality-Shared Learning and Label R
 ![framework.png](figs%2Fframework.png)
 
 # Highlight
-1. We propose a dual-modality-shared learning and label refinement (DLLR) framework for unsupervised learning visible-infrared person re-identification (USL-VI-ReID). By incorporating the designed cluster similarity matching (CSM) and cluster relationship based label refinement (CRLR) algorithms, the framework effectively establishes associations between pseudo labels across modalities.
-2. We design the weighted modality-shared memory (WMM) to assign different weights to samples for memory initialization, which enhances the model's capacity to learn modality-invariant features.
-3. Extensive experiments on two benchmarks demonstrate the effectiveness of our proposed method, outperforming state-of-the-art USL-VI-ReID methods and surpassing many supervised VI-ReID methods.
+1. We propose a DLLR framework for USVI-ReID. By incorporating the CSM and CRLR algorithms, our framework can effectively establish associations between unlabeled samples across modalities, and then generates high quality pseudo labels for model training.
+2. We design the WMM to assign different weights to samples for constructing memory banks, which can enhance the model's capacity to learn modality-invariant features by considering hard samples.
+3. Extensive experiments on three public benchmarks demonstrate the superiority of our proposed method, outperforming state-of-the-art USVI-ReID methods and even surpassing many supervised VI-ReID methods.
 
 # Data Preprocessing
 Put SYSU-MM01 and RegDB dataset into ./data/sysu and ./data/regdb. Then obtain the segmented images for training:
@@ -28,9 +28,5 @@ We utilize a RTX3090 GPU for training.
 ./run_test_sysu.sh # for SYSU-MM01 
 ./run_test_regdb.sh # for RegDB
 ```
-
-# Contact
-
-<font color=Blue>The information of author is not yet publicly available.</font>
 
 The code is implemented based on [ADCA](https://github.com/yangbincv/ADCA).
